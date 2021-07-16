@@ -1,13 +1,14 @@
 <template>
-  <div class="navbar">
-    <div class="right">
-      <slot name="right"></slot>
+  <div class="navbar bottomBoxShadow">
+
+    <div class="left">
+      <slot name="left"></slot>
     </div>
     <div class="center">
       <slot name="center"></slot>
     </div>
-    <div class="left">
-      <slot name="left"></slot>
+    <div class="right">
+      <slot name="right"></slot>
     </div>
   </div>
 
@@ -29,9 +30,13 @@ export default {
 
   .right,
   .left{
-    width: 40px;
+    width: 60px;
   }
   .center{
     flex:1;
+  }
+
+  .bottomBoxShadow{
+    box-shadow: 0 1px 6px rgba(100,100,100,0.1);
   }
 </style>

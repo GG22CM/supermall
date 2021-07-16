@@ -7,7 +7,12 @@ export function request(config){
   });
 
   instance.interceptors.request.use(config=>config,err=>console.log(err))
-  instance.interceptors.response.use(res=>res.data,err=>console.log(err))
+  instance.interceptors.response.use(res=>{
+    /**
+     * 还是有用的
+     */
+    return res.data
+  },err=>console.log(err))
 
   return instance(config)
 }
